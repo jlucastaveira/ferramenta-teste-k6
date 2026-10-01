@@ -3,6 +3,9 @@ import { check, sleep } from 'k6'
 
 
 export const options = {
+    cloud: {
+        projectID: 8485010,
+    },
     stages: [
         {duration: "30s", target: 100},
         {duration: "40s", target: 100},
