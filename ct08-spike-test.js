@@ -1,7 +1,6 @@
 import http from 'k6/http'
 import { sleep, check } from 'k6'
 
-//caso de teste 08
 
 export const options = {
     stages: [

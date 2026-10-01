@@ -2,8 +2,6 @@ import http from 'k6/http'
 import { sleep, check } from 'k6'
 
 
-// caso de teste - CT-04
-
 export default function () {
     const payload = 'diceSideName=heads'; 
     const params = {
@@ -16,7 +14,7 @@ export default function () {
 
     check(res, {
         'Status é 200': (r) => r.status === 200,
-        'Payload foi repetido': (r) => r.body.includes('diceSideName'),
+        'Payload foi repetido com valor correto': (r) => r.body.includes('diceSideName') && r.body.includes('heads'),
     })
 
 

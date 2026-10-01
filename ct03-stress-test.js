@@ -2,8 +2,6 @@ import http from 'k6/http'
 import { check, sleep } from 'k6'
 
 
-// Caso de teste - CT-03
-
 export const options = {
     stages: [
         {duration: "30s", target: 100},

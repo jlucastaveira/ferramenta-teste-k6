@@ -1,8 +1,14 @@
 import http from 'k6/http'
 import { check } from 'k6'
 
+
 const nome = 'admin'
 const senha = 'admin123'
+
+export const options = {
+    vus: 5,
+    iterations: 5,
+}
 
 export default function () {
     const credenciais = `${nome}:${senha}`

@@ -1,11 +1,10 @@
 import http from 'k6/http'
 import { sleep, check } from 'k6'
 
-// Caso de teste - CT-01
 
 export const options = {
     cloud: {
-        projectID: 8480737,
+        projectID: 8485010,
     },
 };
 
